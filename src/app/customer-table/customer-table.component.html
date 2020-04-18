@@ -1,15 +1,10 @@
 
-<mat-form-field class="mat">
+<mat-input-container>
+ <!-- <mat-label>search by name,username,email</mat-label> -->
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-  </mat-form-field>
-  <!-- <form>
-    <mat-form-field class="example-full-width">
-      <mat-label>Favorite food</mat-label>
-      <input type="search" matInput (keyup)="applyFilter($event.target.value)" placeholder="search">
-    </mat-form-field>
-  </form> -->
+  </mat-input-container>
   
-  <div class="mat-elevation-z8">
+  <div class="lessons-table mat-elevation-z8">
   <mat-table [dataSource]="dataSource" matSort   matSortDirection="asc"
     matSortDisableClear>
     <ng-container matColumnDef="name">
@@ -28,11 +23,10 @@
     </ng-container>
   
     <mat-header-row *matHeaderRowDef="displayedColumns" color="primary"></mat-header-row>
-    <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>
-  
-    
+    <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>   
   </mat-table>
-  <mat-paginator [pageSizeOptions]="[3]" showFirstLastButtons>
+
+  <mat-paginator [pageIndex]="0" [pageSize]="2" [pageSizeOptions]="[2, 4, 6, 10]" showFirstLastButtons>
   </mat-paginator>
   
   </div>

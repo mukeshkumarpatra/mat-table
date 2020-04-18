@@ -28,7 +28,8 @@ import {
  MatProgressBarModule,
  MatDatepickerModule,
  MatNativeDateModule,
- MatBadgeModule
+ MatBadgeModule,
+ MatFormFieldModule
 } from '@angular/material';
 @NgModule({
  imports: [
@@ -60,7 +61,8 @@ import {
    MatProgressBarModule,
    MatDatepickerModule,
    MatNativeDateModule,
-   MatBadgeModule
+   MatBadgeModule,
+   MatFormFieldModule
  ],
  exports: [
    MatButtonModule,
@@ -91,7 +93,8 @@ import {
    MatProgressBarModule,
    MatDatepickerModule,
    MatNativeDateModule,
-   MatBadgeModule
+   MatBadgeModule,
+   MatFormFieldModule
  ]
 })
 export class MaterialModule {
