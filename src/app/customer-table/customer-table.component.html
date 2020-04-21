@@ -1,8 +1,8 @@
 
-<mat-input-container>
+<mat-form-field>
  <!-- <mat-label>search by name,username,email</mat-label> -->
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-  </mat-input-container>
+  </mat-form-field>
   
   <div class="lessons-table mat-elevation-z8">
   <mat-table [dataSource]="dataSource" matSort   matSortDirection="asc"
@@ -26,7 +26,7 @@
     <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>   
   </mat-table>
 
-  <mat-paginator [pageIndex]="0" [pageSize]="2" [pageSizeOptions]="[2, 4, 6, 10]" showFirstLastButtons>
+  <mat-paginator  [pageSize]="250" [pageSizeOptions]="[200, 250, 450, 500]" showFirstLastButtons>
   </mat-paginator>
   
   </div>

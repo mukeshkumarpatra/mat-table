@@ -14,7 +14,7 @@ import { MatPaginator } from '@angular/material';
 export class CustomerTableComponent implements OnInit {
 
   @ViewChild(MatSort) sort : MatSort;
-  @ViewChild(MatPaginator) paginator : MatPaginator;
+  @ViewChild(MatPaginator, {static: true}) paginator : MatPaginator;
 
   dataSource;
   displayedColumns = ['name', 'username', 'email'];
